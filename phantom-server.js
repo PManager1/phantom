@@ -22,6 +22,7 @@ page.onResourceRequested = function (request) {
     }
 };
 
+
 // Open the page
 page.open(system.args[1], function () {});
 
@@ -36,3 +37,10 @@ var checkComplete = function () {
 }
 // Let us check to see if the page is finished rendering
 var checkCompleteInterval = setInterval(checkComplete, 1);
+
+
+
+
+
+
+

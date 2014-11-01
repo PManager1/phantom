@@ -32,8 +32,8 @@ var getContent = function(url, callback) {
 
 var respond = function (req, res) {
   // Because we use [P] in htaccess we have access to this header
-  // url = 'http://' + req.headers['x-forwarded-host'] + req.params[0];
-  url = 'http://google.com';
+  url = 'http://' + req.headers['x-forwarded-host'] + req.params[0];
+  // url = 'http://google.com';
   
   getContent(url, function (content) {
     res.send(content);
@@ -41,5 +41,5 @@ var respond = function (req, res) {
 }
 
 app.get(/(.*)/, respond);
-app.listen(8000);
+app.listen(3000);
 console.log ( ' running something '); 
